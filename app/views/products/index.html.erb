@@ -1,0 +1,17 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+<h3>Current Items:</h3>
+
+<%=cart.each do |p|%>
+<%= p%>
+<%end%>
+
+<h3>Create New Item:</h3>
+
+<%= form_tag ({controller: 'products',
+        action: 'add',
+        method: 'post'}) do%>
+
+        <input name=product>
+        <input type=submit value='add to cart'>
+<%end%>
